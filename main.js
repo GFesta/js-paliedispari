@@ -44,3 +44,9 @@ console.log(numeroUtente);
 //genero numero random per il computer 
 var random = Math.floor(Math.random()*5 + 1);
 console.log(random);
+
+//si sommano i due numeri
+var somma = numeroUtente + random
+console.log(somma);
+
+//funzione pari o dispari
