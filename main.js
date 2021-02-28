@@ -19,8 +19,7 @@ function checkPalindrome(parola) {
 
     if(parola == reverseString) {
         document.getElementById("palindroma").innerHTML = "La parola " + parolaInserita + " e palindroma";
-    }
-    else {
+    } else {
         document.getElementById("non-palindroma").innerHTML = "La parola " + parolaInserita + " non e palindroma";
     }
 }
@@ -35,18 +34,33 @@ checkPalindrome(parolaInserita);
 
 //chiedo cosa sceglie tra pari o dispari
 var parioDispari = prompt("Scegli pari o dispari");
-console.log(parioDispari);
 
 //chiedo e l'utente sceglie un numero da 1 a 5
-var numeroUtente = parseInt(prompt('scegli un numero da 1 a 5'));
+var numeroUtente = parseInt(prompt("scegli un numero da 1 a 5"));
 console.log(numeroUtente);
 
 //genero numero random per il computer 
-var random = Math.floor(Math.random()*5 + 1);
-console.log(random);
+var numeroComputer = Math.floor(Math.random()*5 + 1)
+console.log(numeroComputer);
 
 //si sommano i due numeri
-var somma = numeroUtente + random
+var somma = numeroUtente + numeroComputer;
 console.log(somma);
 
 //funzione pari o dispari
+function pari0Dispari(somma) {
+    if (parioDispari == "pari" && somma % 2 == 0){
+    return true;
+    } else if (parioDispari == "dispari" && somma % 2 != 0){
+    return true
+    } else {
+    return false
+    }
+}
+
+//dichiro se l'utente vince o perde
+if (pari0Dispari(somma) == true){
+    alert("hai vinto");
+} else {
+    alert("hai perso");
+}
