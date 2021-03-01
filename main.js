@@ -5,17 +5,33 @@
 //chiedo all'utente di inserire una parola
 var parolaInserita = prompt("Inserisci una parola");
 
+//soluzione con ciclo for
+// var parolaReverse = giraParola(parola);
+
+// if (parola == parolaReverse) {
+//     console.log("Palindroma");
+// }
+// else {
+//     console.log("non palindroma");
+// }
+// function giraParola(parola) {
+//     var parolaReverse = "";
+
+//     for (var i = parola.length - 1; i >= 0; i--) {
+//         parolaReverse += parola[1];
+//     }
+//     return parolaReverse;
+// }
+
+
 //controllo se la parola inserita e palindroma o no
 function checkPalindrome(parola) {
-
     // trasformo la stringa in un array
-    var arrayValues = parola.split('');
-
+    var arrayValues = parola.split('');   //.split divide la stringa in array
     // inverto i valori dell'array
     var reverseArrayValues = arrayValues.reverse();
-
     // transformo la stringa in array
-    var reverseString = reverseArrayValues.join('');
+    var reverseString = reverseArrayValues.join('');  //join riunisce tutto in una stringa
 
     if(parola == reverseString) {
         document.getElementById("palindroma").innerHTML = "La parola " + parolaInserita + " e palindroma";
@@ -24,6 +40,11 @@ function checkPalindrome(parola) {
     }
 }
 checkPalindrome(parolaInserita);
+
+
+
+
+
 
 //PARI E DISPARI
 //L'utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -34,16 +55,15 @@ checkPalindrome(parolaInserita);
 
 //chiedo cosa sceglie tra pari o dispari
 var parioDispari = prompt("Scegli pari o dispari");
-
 //chiedo e l'utente sceglie un numero da 1 a 5
 var numeroUtente = parseInt(prompt("scegli un numero da 1 a 5"));
 console.log(numeroUtente);
 
-//genero numero random per il computer 
+//genero numero random per il computer "senza funzione"
 //var numeroComputer = Math.floor(Math.random()*5 + 1)
 //console.log(numeroComputer);
 
-//genero numero random per il computer con una funzione
+//genero numero random per il computer "con funzione"
 function numeroComputer() {
     var numeroComputer = Math.floor((Math.random() * 5) + 1);
     console.log(numeroComputer);
