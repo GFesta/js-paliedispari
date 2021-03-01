@@ -40,8 +40,14 @@ var numeroUtente = parseInt(prompt("scegli un numero da 1 a 5"));
 console.log(numeroUtente);
 
 //genero numero random per il computer 
-var numeroComputer = Math.floor(Math.random()*5 + 1)
-console.log(numeroComputer);
+//var numeroComputer = Math.floor(Math.random()*5 + 1)
+//console.log(numeroComputer);
+
+//genero numero random per il computer con una funzione
+function numeroComputer() {
+    var numeroComputer = Math.floor((Math.random() * 5) + 1);
+    console.log(numeroComputer);
+}
 
 //si sommano i due numeri
 var somma = numeroUtente + numeroComputer;
